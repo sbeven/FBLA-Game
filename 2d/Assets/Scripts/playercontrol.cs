@@ -158,14 +158,10 @@ public class playercontrol : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         state = State.jumping;
-
     }
 
     private void AnimationState()
     {
-
-
-
         if (state == State.jumping)
         {
             if (rb.velocity.y < .1f)
@@ -177,10 +173,16 @@ public class playercontrol : MonoBehaviour
         {
 
             RaycastHit2D hit = Physics2D.BoxCast(rb.position, box.bounds.size, 0f, Vector2.down, 0.5f, ground);
-            if (hit.collider != null)
+            if (Mathf.Abs(rb.velocity.y) <= .1f)
             {
                 state = State.idle;
             }
+
+            //breaks animation when hitting ceiling
+            //if (hit.collider != null)
+            //{
+            //    state = State.idle;
+            //}
 
         } else if (state == State.hurt)
         {
