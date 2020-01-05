@@ -29,7 +29,7 @@ public class playercontrol : MonoBehaviour
     [SerializeField] private AudioSource recruit;
     [SerializeField] private AudioSource jump;
     [SerializeField] private int health = 3;
-//    [SerializeField] private string sceneToLoad;
+    // [SerializeField] private string sceneToLoad;
     int maxHealth = 0;
     int recruits = 0;
     private void Start()

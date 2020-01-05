@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 
 
-public class UpdateText : MonoBehaviour
+public class UpdateTex : MonoBehaviour
 {
     public TextMeshProUGUI Description;
     public TextMeshProUGUI Requirement;
