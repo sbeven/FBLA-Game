@@ -54,7 +54,7 @@ public class playercontrol : MonoBehaviour
         anim.SetInteger("state", (int)state); //sets animation based on enumerator state
         if (SceneManager.GetActiveScene().name == "first level")
         {
-            if (PermanentUI.perm.coins == 2)
+            if (PermanentUI.perm.coins == 75)
             {
                 PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
                 SceneManager.LoadScene("Transition");

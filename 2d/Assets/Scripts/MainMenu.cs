@@ -8,7 +8,8 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene("Transition");
     }
 
     public void QuitGame()
