@@ -16,9 +16,11 @@ public class Timer : MonoBehaviour
         timeNumber.text = ("Time: " + Mathf.Round(time).ToString() );
         if(time <= 0)
         {
-            SceneManager.LoadScene(sceneToLoad);
+
             PermanentUI.perm.points = PermanentUI.perm.points - 20;
             PermanentUI.perm.Reset();
+            SceneManager.LoadScene(sceneToLoad);
+            time = 90;
         }
     }
 }
