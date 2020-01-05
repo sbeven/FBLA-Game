@@ -78,8 +78,12 @@ public class playercontrol : MonoBehaviour
             recruit.Play();
             Destroy(collision.gameObject);
             recruits = recruits + 1;
-            if (recruits == 3)
+            if(recruits >= 15)
             {
+                PermanentUI.perm.points = PermanentUI.perm.points + 100;
+                PermanentUI.perm.levelpoints = 0;
+                PermanentUI.perm.Reset();
+                // SceneManager.LoadScene(sceneToLoad);
                 PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
                 SceneManager.LoadScene("Transition");
             }
