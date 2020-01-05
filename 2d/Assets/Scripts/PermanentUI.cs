@@ -8,13 +8,15 @@ using UnityEngine.SceneManagement;
 public class PermanentUI : MonoBehaviour
 {
     //player stats
-    public int coins ;
+    public int coins = 0;
 
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI pointAmount;
     public int points = 0;
     public int levelpoints = 0;
     public string name = "";
+
+    public int LastScene;
 
     public static PermanentUI perm;
     public void Update()

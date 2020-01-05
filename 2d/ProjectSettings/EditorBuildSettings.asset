@@ -13,10 +13,10 @@ EditorBuildSettings:
     guid: a06db801d4c75be459146812d02f6c8d
   - enabled: 1
     path: Assets/Scenes/Second Level final.unity
-    guid: 0a820181e0c484173b127bc5b427d1c0
+    guid: 684495527507da0418dcaac878ef1a9d
   - enabled: 1
     path: Assets/Scenes/Third Level.unity
-    guid: 967f129a6a10c437389a2d13d242f75c
+    guid: 12ee8cb30f1232d4ebc1bae99653924e
   - enabled: 1
     path: Assets/Scenes/Fourth Level.unity
     guid: 731c6c7c24aa7924db6d0284ae39f8c8
@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Score Board.unity
     guid: 650c298f37c82461cb81b73a8fc27da8
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Transition.unity
+    guid: 24b7b4734a3be44b7a5c0901399fa151
   m_configObjects: {}
