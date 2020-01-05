@@ -17,7 +17,6 @@ public class Timer : MonoBehaviour
         if(time <= 0)
         {
             SceneManager.LoadScene(sceneToLoad);
-            Destroy(this.gameObject);
             PermanentUI.perm.points = PermanentUI.perm.points - 20;
             PermanentUI.perm.Reset();
         }
