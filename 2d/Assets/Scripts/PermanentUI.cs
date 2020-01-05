@@ -40,7 +40,7 @@ public class PermanentUI : MonoBehaviour
     }
     public void Start()
     {
-
+        if((SceneManager.GetActiveScene().name != "Main Menu"))
         DontDestroyOnLoad(this.gameObject);
         Canvass = GetComponent<Canvas>();
         //singleton
