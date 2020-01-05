@@ -72,6 +72,14 @@ public class playercontrol : MonoBehaviour
             PermanentUI.perm.coinText.text = PermanentUI.perm.coins.ToString();
             PermanentUI.perm.points = PermanentUI.perm.points + 10;
             PermanentUI.perm.levelpoints = PermanentUI.perm.levelpoints + 10;
+            if (PermanentUI.perm.coins == 75)
+            {
+                PermanentUI.perm.points = PermanentUI.perm.points + 100;
+                PermanentUI.perm.levelpoints = 0;
+                PermanentUI.perm.Reset();
+                PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
+                SceneManager.LoadScene("Transition");
+            }
         }
         if (collision.tag == "Adventurer")
         {

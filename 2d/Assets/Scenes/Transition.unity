@@ -209,6 +209,7 @@ MonoBehaviour:
   Description: {fileID: 1648402556}
   Requirement: {fileID: 1600664464}
   Current: {fileID: 309317946}
+  PlayerUI: {fileID: 0}
 --- !u!1 &170468801
 GameObject:
   m_ObjectHideFlags: 0

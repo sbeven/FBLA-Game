@@ -11,6 +11,8 @@ public class UpdateTex : MonoBehaviour
     public TextMeshProUGUI Description;
     public TextMeshProUGUI Requirement;
     public TextMeshProUGUI Current;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class UpdateTex : MonoBehaviour
         }
         else if (PermanentUI.perm.LastScene == 1)
         {
-            Description.text = "The Objective of the Next Level is to Answer All the Questions Correctly";
+            Description.text = "The Objective of the Next Level is to Answer All the Questions Correctly within 90 seconds";
             Requirement.text = "The required coins to access the next level is 75";
             Current.text = "Your current coins collected is " + PermanentUI.perm.coins;
         }
@@ -34,9 +36,9 @@ public class UpdateTex : MonoBehaviour
         }
         else if (PermanentUI.perm.LastScene == 3)
         {
-            Description.text = "The Objective of the Next Level is to Collect 10 coins";
-            Requirement.text = "The required recruiters to recruit to access the next level is 15";
-            Current.text = "The members that you currently recruited is " + PermanentUI.perm.points;
+            Description.text = "Good job!     The Objective of the Next Level is to get to the end in 90 seconds";
+            Requirement.text = "";
+            Current.text = "";
         }
         else if (PermanentUI.perm.LastScene == 4)
         {
@@ -45,9 +47,8 @@ public class UpdateTex : MonoBehaviour
             Current.text = "Your current score is " + PermanentUI.perm.points;
         }
     }
-            // Update is called once per frame
             public void NextScene()
     {
-        SceneManager.LoadScene(PermanentUI.perm.LastScene + 1);
+              SceneManager.LoadScene(PermanentUI.perm.LastScene + 1);
     }
 }

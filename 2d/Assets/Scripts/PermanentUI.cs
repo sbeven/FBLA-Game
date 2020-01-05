@@ -15,10 +15,10 @@ public class PermanentUI : MonoBehaviour
     public int points = 0;
     public int levelpoints = 0;
     public string name = "";
-
+    public float time = 0;
     public int LastScene;
-
     public static PermanentUI perm;
+    private Canvas Canvass;
     public void Update()
     {
         if (SceneManager.GetActiveScene().name == "Main Menu")
@@ -30,14 +30,19 @@ public class PermanentUI : MonoBehaviour
         if ((SceneManager.GetActiveScene().name != "Fourth Level") && (SceneManager.GetActiveScene().name != "first level") 
             && (SceneManager.GetActiveScene().name != "Second Level final") && (SceneManager.GetActiveScene().name != "Third Level"))
         {
-            Destroy(this.gameObject);
+            Canvass.enabled = false;
+        }
+        else
+        {
+            Canvass.enabled = true;
+
         }
     }
     public void Start()
     {
 
         DontDestroyOnLoad(this.gameObject);
-
+        Canvass = GetComponent<Canvas>();
         //singleton
         if (!perm)
         {
@@ -47,6 +52,7 @@ public class PermanentUI : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
     }
     public void Reset()
     {
@@ -54,5 +60,6 @@ public class PermanentUI : MonoBehaviour
         points = points - levelpoints;
         levelpoints = 0;
         coinText.text = coins.ToString();
+        time = 90;
     }
 }
