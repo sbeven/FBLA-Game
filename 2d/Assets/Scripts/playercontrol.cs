@@ -29,7 +29,7 @@ public class playercontrol : MonoBehaviour
     [SerializeField] private AudioSource recruit;
     [SerializeField] private AudioSource jump;
     [SerializeField] private int health = 3;
-    [SerializeField] private string sceneToLoad;
+//    [SerializeField] private string sceneToLoad;
     int maxHealth = 0;
     int recruits = 0;
     private void Start()
@@ -52,6 +52,14 @@ public class playercontrol : MonoBehaviour
         AnimationState();
         PermanentUI.perm.pointAmount.text = PermanentUI.perm.points.ToString();
         anim.SetInteger("state", (int)state); //sets animation based on enumerator state
+        if (SceneManager.GetActiveScene().name == "first level")
+        {
+            if (PermanentUI.perm.coins == 2)
+            {
+                PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
+                SceneManager.LoadScene("Transition");
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -70,14 +78,19 @@ public class playercontrol : MonoBehaviour
             recruit.Play();
             Destroy(collision.gameObject);
             recruits = recruits + 1;
+            if (recruits == 3)
+            {
+                PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
+                SceneManager.LoadScene("Transition");
+            }
         }
         if (collision.tag == "Door")
         {
             PermanentUI.perm.points = PermanentUI.perm.points + 100;
             PermanentUI.perm.levelpoints = 0;
             PermanentUI.perm.Reset();
-            SceneManager.LoadScene(sceneToLoad);
-
+            PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene("Transition");
         }
     }
 
