@@ -70,12 +70,12 @@ public class playercontrol : MonoBehaviour
             Destroy(collision.gameObject);
             PermanentUI.perm.coins += 1;
             PermanentUI.perm.coinText.text = PermanentUI.perm.coins.ToString();
-            PermanentUI.perm.points = PermanentUI.perm.points + 10;
+            
             PermanentUI.perm.levelpoints = PermanentUI.perm.levelpoints + 10;
             if (PermanentUI.perm.coins == 75)
             {
                 PermanentUI.perm.points = PermanentUI.perm.points + 100;
-                PermanentUI.perm.levelpoints = 0;
+                
                 PermanentUI.perm.Reset();
                 PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
                 SceneManager.LoadScene("Transition");
@@ -89,7 +89,7 @@ public class playercontrol : MonoBehaviour
             if(recruits >= 15)
             {
                 PermanentUI.perm.points = PermanentUI.perm.points + 100;
-                PermanentUI.perm.levelpoints = 0;
+                
                 PermanentUI.perm.Reset();
                 // SceneManager.LoadScene(sceneToLoad);
                 PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
@@ -99,7 +99,7 @@ public class playercontrol : MonoBehaviour
         if (collision.tag == "Door")
         {
             PermanentUI.perm.points = PermanentUI.perm.points + 100;
-            PermanentUI.perm.levelpoints = 0;
+            
             PermanentUI.perm.Reset();
             PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene("Transition");
@@ -135,6 +135,7 @@ public class playercontrol : MonoBehaviour
                 if (health == 0)
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    PermanentUI.perm.levelpoints = 0;
                     PermanentUI.perm.Reset();
                     PermanentUI.perm.points = PermanentUI.perm.points - 20;
                     health = 3;

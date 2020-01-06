@@ -34,9 +34,11 @@ public class PermanentUI : MonoBehaviour
         }
         else
         {
+
             Canvass.enabled = true;
 
         }
+        
     }
     public void Start()
     {
@@ -57,7 +59,7 @@ public class PermanentUI : MonoBehaviour
     public void Reset()
     {
         coins = 0;
-        points = points - levelpoints;
+        points = points + levelpoints;
         levelpoints = 0;
         coinText.text = coins.ToString();
         time = 90;
