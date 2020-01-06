@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject Instructions;
+    public GameObject Menu;
+    public static bool firstCall = true;
 
     public void PlayGame()
     {
@@ -22,4 +25,14 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Score Board");
     }
+    private void Awake()
+    {
+        if (firstCall)
+        {
+            Instructions.SetActive(true);
+            Menu.SetActive(false);
+        }
+        firstCall = false;
+    }
+
 }

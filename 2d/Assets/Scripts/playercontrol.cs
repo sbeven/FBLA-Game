@@ -131,10 +131,6 @@ public class playercontrol : MonoBehaviour
 
     private void Movement()
     {
-        if (Input.GetKey(KeyCode.K))
-        {
-            SceneManager.LoadScene("Input");
-        }
         //left
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
