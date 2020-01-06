@@ -52,14 +52,6 @@ public class playercontrol : MonoBehaviour
         AnimationState();
         PermanentUI.perm.pointAmount.text = PermanentUI.perm.points.ToString();
         anim.SetInteger("state", (int)state); //sets animation based on enumerator state
-        if (SceneManager.GetActiveScene().name == "first level")
-        {
-            if (PermanentUI.perm.coins == 75)
-            {
-                PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
-                SceneManager.LoadScene("Transition");
-            }
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -70,13 +62,10 @@ public class playercontrol : MonoBehaviour
             Destroy(collision.gameObject);
             PermanentUI.perm.coins += 1;
             PermanentUI.perm.coinText.text = PermanentUI.perm.coins.ToString();
-            
             PermanentUI.perm.levelpoints = PermanentUI.perm.levelpoints + 10;
             if (PermanentUI.perm.coins == 75)
             {
-                PermanentUI.perm.points = PermanentUI.perm.points + 100;
-                
-                PermanentUI.perm.Reset();
+                PermanentUI.perm.points = PermanentUI.perm.points + 100;                
                 PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
                 SceneManager.LoadScene("Transition");
             }
@@ -89,9 +78,6 @@ public class playercontrol : MonoBehaviour
             if(recruits >= 15)
             {
                 PermanentUI.perm.points = PermanentUI.perm.points + 100;
-                
-                PermanentUI.perm.Reset();
-                // SceneManager.LoadScene(sceneToLoad);
                 PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
                 SceneManager.LoadScene("Transition");
             }
@@ -99,8 +85,6 @@ public class playercontrol : MonoBehaviour
         if (collision.tag == "Door")
         {
             PermanentUI.perm.points = PermanentUI.perm.points + 100;
-            
-            PermanentUI.perm.Reset();
             PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene("Transition");
         }
