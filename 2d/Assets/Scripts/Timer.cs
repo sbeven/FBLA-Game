@@ -16,20 +16,18 @@ public class Timer : MonoBehaviour
     }
     private void Update()
     {
-               if ((SceneManager.GetActiveScene().name != "Fourth Level") && (SceneManager.GetActiveScene().name != "first level")
+        if ((SceneManager.GetActiveScene().name != "Fourth Level") && (SceneManager.GetActiveScene().name != "first level")
             && (SceneManager.GetActiveScene().name != "Second Level final") && (SceneManager.GetActiveScene().name != "Third Level"))
             {
 
             }
             else
             {
-        PermanentUI.perm.time -= 1 * Time.deltaTime;
-        timeNumber.text = ("Time: " + Mathf.Round(PermanentUI.perm.time).ToString() );
+                PermanentUI.perm.time -= 1 * Time.deltaTime;
+                timeNumber.text = ("Time: " + Mathf.Round(PermanentUI.perm.time).ToString() );
             }
-
         if(PermanentUI.perm.time <= 0)
         {
-
             PermanentUI.perm.points = PermanentUI.perm.points - 20;
             PermanentUI.perm.Reset();
             SceneManager.LoadScene(sceneToLoad);
