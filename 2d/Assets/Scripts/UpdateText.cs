@@ -27,7 +27,7 @@ public class UpdateText : MonoBehaviour
         {
             Description.text = "The Objective of the Next Level is to Answer All the Questions Correctly within 90 seconds";
             Requirement.text = "The required coins to access the next level is 75";
-            Current.text = "Your current coins collected is " + PermanentUI.perm.coins;
+            Current.text = "You have " + PermanentUI.perm.points +" points";
             PermanentUI.perm.Reset();
         }
         else if (PermanentUI.perm.LastScene == 2)
@@ -41,7 +41,7 @@ public class UpdateText : MonoBehaviour
         {
             Description.text = "Good job!     The Objective of the Next Level is to get to the end in 90 seconds";
             Requirement.text = "";
-            Current.text = "";
+            Current.text = "You have " + PermanentUI.perm.points + " points";
             PermanentUI.perm.Reset();
         }
         else if (PermanentUI.perm.LastScene == 4)
