@@ -31,7 +31,7 @@ public class Frog : Enemy
             }
         }
         //transition from fall to idle
-        if (coll.IsTouchingLayers(ground) && anim.GetBool("Falling"))
+        if (coll.IsTouchingLayers(ground) && anim.GetBool("Falling")) // || (IsTouchingEnemy && rb.velocity.y<.1)
         {
             anim.SetBool("Falling", false);
         }

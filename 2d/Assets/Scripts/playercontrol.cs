@@ -45,6 +45,7 @@ public class playercontrol : MonoBehaviour
 
     private void Update()
     {
+        PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
         if (state != State.hurt)
         {
             Movement();
@@ -66,7 +67,6 @@ public class playercontrol : MonoBehaviour
             if (PermanentUI.perm.coins == 75)
             {
                 PermanentUI.perm.points = PermanentUI.perm.points + 100;                
-                PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
                 SceneManager.LoadScene("Transition");
             }
         }
@@ -78,14 +78,12 @@ public class playercontrol : MonoBehaviour
             if(recruits >= 15)
             {
                 PermanentUI.perm.points = PermanentUI.perm.points + 100;
-                PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
                 SceneManager.LoadScene("Transition");
             }
         }
         if (collision.tag == "Door")
         {
             PermanentUI.perm.points = PermanentUI.perm.points + 100;
-            PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene("Transition");
         }
     }

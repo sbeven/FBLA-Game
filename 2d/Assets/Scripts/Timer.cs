@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private string sceneToLoad;
     [SerializeField] private TextMeshProUGUI timeNumber;
 
     private void Start()
@@ -29,9 +28,10 @@ public class Timer : MonoBehaviour
 
         if(PermanentUI.perm.time <= 0)
         {
-            PermanentUI.perm.points = PermanentUI.perm.points - 20;
+            PermanentUI.perm.levelpoints = 0;
             PermanentUI.perm.Reset();
-            SceneManager.LoadScene(sceneToLoad);
+            PermanentUI.perm.points = PermanentUI.perm.points - 20;
+            SceneManager.LoadScene(PermanentUI.perm.LastScene);
             PermanentUI.perm.time = 90;
         }
     }
