@@ -12,7 +12,7 @@ public class Ending : MonoBehaviour
     void Start()
     {
         PermanentUI.perm.LastScene = 5;
-        if (PermanentUI.perm.points >= 750)
+        if (PermanentUI.perm.points >= 1300)
         {
             goodorbad.text = "As a result of your hard work, you've recieved all 4 awards! Congratulations!";
         }
