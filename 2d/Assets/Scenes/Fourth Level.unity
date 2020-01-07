@@ -161,11 +161,20 @@ MonoBehaviour:
   coins: 0
   coinText: {fileID: 1559132683}
   pointAmount: {fileID: 207023766}
+  livesAmount: {fileID: 0}
   points: 0
   levelpoints: 0
   name: 
   time: 0
   LastScene: 0
+  lives: 0
+  menumusic: {fileID: 0}
+  music1: {fileID: 0}
+  music2: {fileID: 0}
+  music3: {fileID: 0}
+  music4: {fileID: 0}
+  endmusic1: {fileID: 0}
+  endmusic2: {fileID: 0}
 --- !u!114 &66397776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1891,6 +1900,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 350171893}
     m_Modifications:
+    - target: {fileID: 375810022, guid: 6f68c9b2a788bde42b9c6ba6ab279dc2, type: 3}
+      propertyPath: m_Volume
+      value: 0.784
+      objectReference: {fileID: 0}
     - target: {fileID: 8833782253234995523, guid: 6f68c9b2a788bde42b9c6ba6ab279dc2,
         type: 3}
       propertyPath: m_Name
@@ -2636,7 +2649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728849988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.977425, y: 0.37999845, z: -10}
+  m_LocalPosition: {x: -24.983574, y: 0.37999845, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5922,7 +5935,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f244329bc0f586b499ba8d48ab203de8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Second Level final
   timeNumber: {fileID: 1842970529}
 --- !u!114 &1842970529
 MonoBehaviour:
@@ -6299,6 +6311,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3101110476463190274, guid: 608982b22e780cb4fa068a5de0ada184,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8161114277461541769, guid: 608982b22e780cb4fa068a5de0ada184,
         type: 3}
       propertyPath: healthBar
@@ -7035,16 +7052,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1041185383065065509, guid: 32a4d70d2edad6a46959c9cbd9251aa0,
-        type: 3}
-      propertyPath: rightCap
-      value: 19.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1041185383065065509, guid: 32a4d70d2edad6a46959c9cbd9251aa0,
-        type: 3}
-      propertyPath: leftCap
-      value: 20.19
-      objectReference: {fileID: 0}
     - target: {fileID: 1041185383065065514, guid: 32a4d70d2edad6a46959c9cbd9251aa0,
         type: 3}
       propertyPath: m_LocalPosition.x

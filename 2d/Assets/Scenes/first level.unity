@@ -2582,7 +2582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728849988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.979778, y: 0.37999845, z: -10}
+  m_LocalPosition: {x: -24.983574, y: 0.37999845, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5550,6 +5550,13 @@ MonoBehaviour:
   time: 0
   LastScene: 0
   lives: 10
+  menumusic: {fileID: 0}
+  music1: {fileID: 0}
+  music2: {fileID: 0}
+  music3: {fileID: 0}
+  music4: {fileID: 0}
+  endmusic1: {fileID: 0}
+  endmusic2: {fileID: 0}
 --- !u!4 &1703392687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1958050445040219296, guid: 34f61a869881c4f4181a259d61ffdb18,

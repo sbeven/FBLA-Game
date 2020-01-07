@@ -16,17 +16,27 @@ public class PermanentUI : MonoBehaviour
     public int points = 0;
     public int levelpoints = 0;
     public string name = "";
-    public float time = 0;
+    public float time = 90;
     public int LastScene;
     public static PermanentUI perm;
     private Canvas Canvass;
     public int lives;
+    public AudioSource menumusic;
+    public AudioSource music1;
+    public AudioSource music2;
+    public AudioSource music3;
+    public AudioSource music4;
+    public AudioSource endmusic1;
+    public AudioSource endmusic2;
+    public AudioSource die;
     public void Update()
     {
+        
         if (SceneManager.GetActiveScene().name == "Main Menu")
         {
             name = "";
             points = 0;
+           
         }
 
         if ((SceneManager.GetActiveScene().name != "Fourth Level") && (SceneManager.GetActiveScene().name != "first level") 
@@ -44,8 +54,9 @@ public class PermanentUI : MonoBehaviour
     }
     public void Start()
     {
-        if((SceneManager.GetActiveScene().name != "Main Menu"))
         DontDestroyOnLoad(this.gameObject);
+        
+        
         Canvass = GetComponent<Canvas>();
         lives = 5;
         //singleton
@@ -56,6 +67,12 @@ public class PermanentUI : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
+        }
+        if (SceneManager.GetActiveScene().name == "Main Menu")
+        {
+            PermanentUI.perm.endmusic1.Stop();
+            PermanentUI.perm.endmusic2.Stop();
+            PermanentUI.perm.menumusic.Play();
         }
 
     }

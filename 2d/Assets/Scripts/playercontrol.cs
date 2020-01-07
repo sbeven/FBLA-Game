@@ -133,6 +133,7 @@ public class playercontrol : MonoBehaviour
                     PermanentUI.perm.points = PermanentUI.perm.points - 20;
                     health = 3;
                     healthBar.UpdateBar(health, maxHealth);
+                    PermanentUI.perm.die.Play();
                 }
             }
         }
