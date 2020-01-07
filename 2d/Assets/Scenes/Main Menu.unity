@@ -1246,7 +1246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &825209021
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2711,7 +2711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -191.1, y: 80.1}
+  m_AnchoredPosition: {x: -191.09988, y: 80.09994}
   m_SizeDelta: {x: 1623.1, y: 705.6}
   m_Pivot: {x: 0.5000001, y: 0.49999988}
 --- !u!114 &2106441911
@@ -2734,7 +2734,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 4
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -2745,7 +2745,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INSTRUCTIONS
+  m_Text: 'INSTRUCTIONS
+
+    Movement:
+
+    Use the left and right arrow keys to move
+
+    Use the up key or spacebar to jump
+
+    Goal:
+
+    Do the objective in each level to complete the BAA program
+
+    Collect as many points as you can along the way
+
+
+    The more points you have, the higher your chances are of completing the program'
 --- !u!222 &2106441912
 CanvasRenderer:
   m_ObjectHideFlags: 0
