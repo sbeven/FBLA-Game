@@ -12,6 +12,7 @@ public class PermanentUI : MonoBehaviour
 
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI pointAmount;
+    public TextMeshProUGUI livesAmount;
     public int points = 0;
     public int levelpoints = 0;
     public string name = "";
@@ -19,6 +20,7 @@ public class PermanentUI : MonoBehaviour
     public int LastScene;
     public static PermanentUI perm;
     private Canvas Canvass;
+    public int lives;
     public void Update()
     {
         if (SceneManager.GetActiveScene().name == "Main Menu")
@@ -45,6 +47,7 @@ public class PermanentUI : MonoBehaviour
         if((SceneManager.GetActiveScene().name != "Main Menu"))
         DontDestroyOnLoad(this.gameObject);
         Canvass = GetComponent<Canvas>();
+        lives = 5;
         //singleton
         if (!perm)
         {

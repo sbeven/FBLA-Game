@@ -9,6 +9,7 @@ public class Fall : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            PermanentUI.perm.lives = PermanentUI.perm.lives - 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             PermanentUI.perm.levelpoints = 0;
             PermanentUI.perm.Reset();

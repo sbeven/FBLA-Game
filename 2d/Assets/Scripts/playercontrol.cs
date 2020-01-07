@@ -53,6 +53,13 @@ public class playercontrol : MonoBehaviour
         AnimationState();
         PermanentUI.perm.pointAmount.text = PermanentUI.perm.points.ToString();
         anim.SetInteger("state", (int)state); //sets animation based on enumerator state
+        PermanentUI.perm.livesAmount.text = "Lives: " + PermanentUI.perm.lives.ToString();
+        if (PermanentUI.perm.lives <= 0)
+        {
+            PermanentUI.perm.points = 0;
+            SceneManager.LoadScene("Ending");
+            PermanentUI.perm.lives = 5;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -66,6 +73,7 @@ public class playercontrol : MonoBehaviour
             PermanentUI.perm.levelpoints = PermanentUI.perm.levelpoints + 10;
             if (PermanentUI.perm.coins == 75)
             {
+                PermanentUI.perm.lives = 5;
                 PermanentUI.perm.points = PermanentUI.perm.points + 100;                
                 SceneManager.LoadScene("Transition");
             }
@@ -77,12 +85,14 @@ public class playercontrol : MonoBehaviour
             recruits = recruits + 1;
             if(recruits >= 15)
             {
+                PermanentUI.perm.lives = 5;
                 PermanentUI.perm.points = PermanentUI.perm.points + 100;
                 SceneManager.LoadScene("Transition");
             }
         }
         if (collision.tag == "Door")
         {
+            PermanentUI.perm.lives = 5;
             PermanentUI.perm.points = PermanentUI.perm.points + 100;
             SceneManager.LoadScene("Transition");
         }
@@ -116,6 +126,7 @@ public class playercontrol : MonoBehaviour
                 TakeDamage(1);
                 if (health == 0)
                 {
+                    PermanentUI.perm.lives = PermanentUI.perm.lives - 1;
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     PermanentUI.perm.levelpoints = 0;
                     PermanentUI.perm.Reset();
