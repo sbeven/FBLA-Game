@@ -29,6 +29,8 @@ public class Timer : MonoBehaviour
         if(PermanentUI.perm.time <= 0)
         {
             PermanentUI.perm.points = PermanentUI.perm.points - PermanentUI.perm.levelpoints - 20;
+            PermanentUI.perm.lives = PermanentUI.perm.lives - 1;
+            PermanentUI.perm.die.Play();
             SceneManager.LoadScene(PermanentUI.perm.LastScene);
             PermanentUI.perm.Reset();
         }
