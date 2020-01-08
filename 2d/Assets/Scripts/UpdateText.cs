@@ -19,8 +19,8 @@ public class UpdateText : MonoBehaviour
         if (PermanentUI.perm.LastScene == 0)
         {
             PermanentUI.perm.menumusic.Stop();
-            Description.text = "";
-            Requirement.text = "Service: March of Dimes needs your help fundraising! Collect 75 coins in 90 seconds";
+            Description.text = "Service: March of Dimes needs your help fundraising! Collect 75 coins in 90 seconds";
+            Requirement.text = "";
             Current.text = "";
             PermanentUI.perm.Reset();
         }
@@ -28,7 +28,7 @@ public class UpdateText : MonoBehaviour
         {
             PermanentUI.perm.music1.Stop();
             Description.text = "Education: Answer 5 questions in 90 seconds to learn about FBLA's Business Achievement Awards!";
-            Requirement.text = "You made it! You collected 75 coins and donated to the March of Dimes";
+            Requirement.text = "You made it! You collected 75 coins for your local chapter and donated to the March of Dimes";
             Current.text = "You have " + (PermanentUI.perm.points) +" points";
             PermanentUI.perm.Reset();
         }
