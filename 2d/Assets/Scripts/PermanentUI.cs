@@ -76,7 +76,13 @@ public class PermanentUI : MonoBehaviour
         {
             endmusic1.Stop();
             endmusic2.Stop();
-            perm.menumusic.Play();
+            Debug.Log("Run");
+            menumusic.Play();
+            music1.Stop();
+            music2.Stop();
+            music3.Stop();
+            music4.Stop();
+            die.Stop();
         }
 
     }

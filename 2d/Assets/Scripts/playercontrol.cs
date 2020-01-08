@@ -133,7 +133,7 @@ public class playercontrol : MonoBehaviour
                     PermanentUI.perm.Reset();
                     health = 3;
                     healthBar.UpdateBar(health, maxHealth);
-                    PermanentUI.perm.die.Play();
+//                    PermanentUI.perm.die.Play();
                 }
             }
         }

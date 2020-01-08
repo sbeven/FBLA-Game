@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject Instructions;
     public GameObject Menu;
-    public static bool firstCall = true;
+//    public static bool firstCall = true;
     public Slider volume;
 
     public void PlayGame()
@@ -27,16 +27,18 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Score Board");
     }
+
     private void Awake()
     {
-        if (firstCall)
-        {
-            Instructions.SetActive(true);
-            Menu.SetActive(false);
+        //if (firstCall)
+        //{
+        //    Instructions.SetActive(true);
+        //    Menu.SetActive(false);
 
-        }
-        firstCall = false;
+        //}
+        //firstCall = false;
     }
+
     private void Update()
     {
         PermanentUI.perm.musicVolume = volume.value;

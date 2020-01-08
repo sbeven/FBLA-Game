@@ -2989,7 +2989,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f244329bc0f586b499ba8d48ab203de8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Second Level final
   timeNumber: {fileID: 617476049}
 --- !u!114 &617476049
 MonoBehaviour:
@@ -5888,11 +5887,22 @@ MonoBehaviour:
   coins: 0
   coinText: {fileID: 113913327}
   pointAmount: {fileID: 1863720184}
+  livesAmount: {fileID: 0}
   points: 0
   levelpoints: 0
   name: 
   time: 0
   LastScene: 0
+  lives: 0
+  menumusic: {fileID: 0}
+  music1: {fileID: 0}
+  music2: {fileID: 0}
+  music3: {fileID: 0}
+  music4: {fileID: 0}
+  endmusic1: {fileID: 0}
+  endmusic2: {fileID: 0}
+  die: {fileID: 0}
+  musicVolume: 1
 --- !u!114 &1348081440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7447,6 +7457,7 @@ GameObject:
   - component: {fileID: 1877977955}
   - component: {fileID: 1877977954}
   - component: {fileID: 1877977953}
+  - component: {fileID: 1877977957}
   m_Layer: 5
   m_Name: Normal Canvas
   m_TagString: Untagged
@@ -7534,6 +7545,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1877977957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877977952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18bd60a6b8b9f4602bd55541812e4d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1933958723
 PrefabInstance:
   m_ObjectHideFlags: 0

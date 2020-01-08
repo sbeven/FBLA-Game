@@ -17,6 +17,7 @@ public class Ending : MonoBehaviour
         PermanentUI.perm.music3.Stop();
         PermanentUI.perm.music4.Stop();
         PermanentUI.perm.LastScene = 5;
+        PermanentUI.perm.die.Stop();
         if (PermanentUI.perm.points >= 1100)
         {
             goodorbad.text = "As a result of your hard work, you've recieved all 4 awards! Congratulations!";
