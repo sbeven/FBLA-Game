@@ -28,6 +28,8 @@ public class Timer : MonoBehaviour
 
         if(PermanentUI.perm.time <= 0)
         {
+            PermanentUI.perm.lives = PermanentUI.perm.lives - 1;
+            PermanentUI.perm.die.Play();
             PermanentUI.perm.levelpoints = 0;
             PermanentUI.perm.Reset();
             PermanentUI.perm.points = PermanentUI.perm.points - 20;
