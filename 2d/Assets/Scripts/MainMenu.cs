@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject Instructions;
     public GameObject Menu;
     public static bool firstCall = true;
+    public Slider volume;
 
     public void PlayGame()
     {
@@ -31,8 +33,12 @@ public class MainMenu : MonoBehaviour
         {
             Instructions.SetActive(true);
             Menu.SetActive(false);
+
         }
         firstCall = false;
     }
-
+    private void Update()
+    {
+        PermanentUI.perm.musicVolume = volume.value;
+    }
 }

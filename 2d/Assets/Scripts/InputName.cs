@@ -11,7 +11,13 @@ public class InputName : MonoBehaviour
 
     private void Awake()
     {
-        Score.text = "Congratulations! You scored "+PermanentUI.perm.points.ToString() + "!";
+        if(PermanentUI.perm.points >= 1100)
+        {
+            Score.text = "Congratulations! You scored " + PermanentUI.perm.points.ToString() + "!";
+        } else
+        {
+            Score.text = "You scored " + PermanentUI.perm.points.ToString() + "!";
+        }
     }
 
     public void StoreName()

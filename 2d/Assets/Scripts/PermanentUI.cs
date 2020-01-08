@@ -29,14 +29,21 @@ public class PermanentUI : MonoBehaviour
     public AudioSource endmusic1;
     public AudioSource endmusic2;
     public AudioSource die;
+    public float musicVolume = 1;
     public void Update()
     {
-        
+        menumusic.volume = musicVolume;
+        music1.volume = musicVolume;
+        music2.volume = musicVolume;
+        music3.volume = musicVolume;
+        music4.volume = musicVolume;
+        endmusic1.volume = musicVolume;
+        endmusic2.volume = musicVolume;
+        die.volume = musicVolume;
         if (SceneManager.GetActiveScene().name == "Main Menu")
         {
             name = "";
-            points = 0;
-           
+            points = 0;  
         }
 
         if ((SceneManager.GetActiveScene().name != "Fourth Level") && (SceneManager.GetActiveScene().name != "first level") 
@@ -46,11 +53,8 @@ public class PermanentUI : MonoBehaviour
         }
         else
         {
-
             Canvass.enabled = true;
-
         }
-        
     }
     public void Start()
     {
@@ -70,16 +74,15 @@ public class PermanentUI : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "Main Menu")
         {
-            PermanentUI.perm.endmusic1.Stop();
-            PermanentUI.perm.endmusic2.Stop();
-            PermanentUI.perm.menumusic.Play();
+            endmusic1.Stop();
+            endmusic2.Stop();
+            perm.menumusic.Play();
         }
 
     }
     public void Reset()
     {
         coins = 0;
-        points = points + levelpoints;
         levelpoints = 0;
         coinText.text = coins.ToString();
         time = 90;

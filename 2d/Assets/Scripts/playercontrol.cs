@@ -71,6 +71,7 @@ public class playercontrol : MonoBehaviour
             PermanentUI.perm.coins += 1;
             PermanentUI.perm.coinText.text = PermanentUI.perm.coins.ToString();
             PermanentUI.perm.levelpoints = PermanentUI.perm.levelpoints + 10;
+            PermanentUI.perm.points += 10;
             if (PermanentUI.perm.coins == 75)
             {
                 PermanentUI.perm.lives = 5;
@@ -128,9 +129,8 @@ public class playercontrol : MonoBehaviour
                 {
                     PermanentUI.perm.lives = PermanentUI.perm.lives - 1;
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                    PermanentUI.perm.levelpoints = 0;
+                    PermanentUI.perm.points = PermanentUI.perm.points - PermanentUI.perm.levelpoints - 20;
                     PermanentUI.perm.Reset();
-                    PermanentUI.perm.points = PermanentUI.perm.points - 20;
                     health = 3;
                     healthBar.UpdateBar(health, maxHealth);
                     PermanentUI.perm.die.Play();
