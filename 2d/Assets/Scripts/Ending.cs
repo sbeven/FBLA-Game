@@ -29,10 +29,4 @@ public class Ending : MonoBehaviour
             goodorbad.text = "Although you didn't get all 4 awards, your dedication to the BAA's goals of service, education, and progress is incredible! Keep working hard!";
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

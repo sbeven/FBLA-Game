@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject Instructions;
-    public GameObject Menu;
-//    public static bool firstCall = true;
+ //   public GameObject Instructions;
+ //   public GameObject Menu;
+ //   public static bool firstCall = true;
     public Slider volume;
 
     public void PlayGame()

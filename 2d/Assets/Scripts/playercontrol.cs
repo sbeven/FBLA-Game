@@ -32,6 +32,7 @@ public class playercontrol : MonoBehaviour
     // [SerializeField] private string sceneToLoad;
     int maxHealth = 0;
     int recruits = 0;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

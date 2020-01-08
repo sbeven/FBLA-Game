@@ -36,7 +36,7 @@ public class UpdateText : MonoBehaviour
         {
             PermanentUI.perm.music2.Stop();
             Description.text = "Progress: Your local chapter needs more members! Recruit 15 members in 90 seconds to get to the next level";
-            Requirement.text = "Congratulations! You got them all right!";
+            Requirement.text = "Congratulations!   You got them all right!                                ";
             Current.text = "Your current score is " + (PermanentUI.perm.points);
             PermanentUI.perm.Reset();
         }

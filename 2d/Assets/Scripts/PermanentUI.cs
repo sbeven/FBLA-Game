@@ -59,8 +59,6 @@ public class PermanentUI : MonoBehaviour
     public void Start()
     {
         DontDestroyOnLoad(this.gameObject);
-        
-        
         Canvass = GetComponent<Canvas>();
         lives = 5;
         //singleton
@@ -74,15 +72,14 @@ public class PermanentUI : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "Main Menu")
         {
-            endmusic1.Stop();
-            endmusic2.Stop();
-            Debug.Log("Run");
-            menumusic.Play();
-            music1.Stop();
-            music2.Stop();
-            music3.Stop();
-            music4.Stop();
-            die.Stop();
+            perm.endmusic1.Stop();
+            perm.endmusic2.Stop();
+            perm.menumusic.Play();
+            perm.music1.Stop();
+            perm.music2.Stop();
+            perm.music3.Stop();
+            perm.music4.Stop();
+            perm.die.Stop();
         }
 
     }

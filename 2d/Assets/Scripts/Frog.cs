@@ -62,7 +62,6 @@ public class Frog : Enemy
             }
             //if not then face right
         }
-
         else
         {
             if (transform.position.x < rightCap)
@@ -87,7 +86,4 @@ public class Frog : Enemy
             //if not then face right
         }
     }
-
-
-
 }
