@@ -39,7 +39,6 @@ public class PermanentUI : MonoBehaviour
         music4.volume = musicVolume;
         endmusic1.volume = musicVolume;
         endmusic2.volume = musicVolume;
-        die.volume = musicVolume;
         if (SceneManager.GetActiveScene().name == "Main Menu")
         {
             name = "";

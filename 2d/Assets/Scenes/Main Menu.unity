@@ -1416,7 +1416,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.1
+  m_Value: 0.04
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5242,7 +5242,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Credits\n\n\nMusic:\n\tKevin MacLeod\n\nTutorial:\n\tAlvin Roe\n\tBrackeys\n\nAssets:\n\tSunnyLand\n\tFootstep\n\tAdventurer"
+  m_Text: "Credits\n\n\nMusic:\n\tKevin MacLeod\n\nTutorial:\n\tAlvin Roe\n\tBrackeys\n\nAssets:\n\tSunnyLand\n\tFootstep\n\tAdventurer\n\tZero
+    Rare\n\tSimple Health Bar"
 --- !u!222 &2004862570
 CanvasRenderer:
   m_ObjectHideFlags: 0
