@@ -30,6 +30,7 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
+
         //if (firstCall)
         //{
         //    Instructions.SetActive(true);
