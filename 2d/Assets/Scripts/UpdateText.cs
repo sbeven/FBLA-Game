@@ -37,7 +37,7 @@ public class UpdateText : MonoBehaviour
             Coin.text = "Coin Bonus: "+ PermanentUI.perm.coins*10;
             Level.text = "Level Bonus: 100";
             PermanentUI.perm.points += PermanentUI.perm.levelpoints;
-            Total.text = "You have "+ PermanentUI.perm.points;
+            Total.text = "You have "+ PermanentUI.perm.points+ " points";
             PermanentUI.perm.Reset();
         }
         else if (PermanentUI.perm.LastScene == 2)
@@ -48,7 +48,7 @@ public class UpdateText : MonoBehaviour
             Coin.text = "Coin Bonus: " + PermanentUI.perm.coins * 10;
             Level.text = "Level Bonus: 100";
             PermanentUI.perm.points += PermanentUI.perm.levelpoints;
-            Total.text = "You have " + PermanentUI.perm.points;
+            Total.text = "You have " + PermanentUI.perm.points + " points";
             PermanentUI.perm.Reset();
         }
         else if (PermanentUI.perm.LastScene == 3)
@@ -59,7 +59,7 @@ public class UpdateText : MonoBehaviour
             Coin.text = "Coin Bonus: " + PermanentUI.perm.coins * 10;
             Level.text = "Level Bonus: 100";
             PermanentUI.perm.points += PermanentUI.perm.levelpoints;
-            Total.text = "You have " + PermanentUI.perm.points;
+            Total.text = "You have " + PermanentUI.perm.points + " points";
             PermanentUI.perm.Reset();
         }
         else if (PermanentUI.perm.LastScene == 4)
@@ -70,7 +70,7 @@ public class UpdateText : MonoBehaviour
             Coin.text = "Coin Bonus: " + PermanentUI.perm.coins * 10;
             Level.text = "Level Bonus: 100";
             PermanentUI.perm.points += PermanentUI.perm.levelpoints;
-            Total.text = "You have " + PermanentUI.perm.points;
+            Total.text = "You have " + PermanentUI.perm.points + " points";
             PermanentUI.perm.Reset();
         }
     }
