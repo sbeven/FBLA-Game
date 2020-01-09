@@ -19,7 +19,7 @@ public class Scoreboard : MonoBehaviour
     public Text fourthName;
     public Text fifthName;
 
-    private int score = PermanentUI.perm.points;
+    private int scoreboardscore = PermanentUI.perm.points;
     private string accName = PermanentUI.perm.name;
 
 
@@ -29,7 +29,7 @@ public class Scoreboard : MonoBehaviour
     {
         highscore = new List<int>() { PlayerPrefs.GetInt("firstScore"), PlayerPrefs.GetInt("secondScore") , PlayerPrefs.GetInt("thirdScore") , PlayerPrefs.GetInt("fourthScore") , PlayerPrefs.GetInt("fifthScore") };
         names = new List<string>() { PlayerPrefs.GetString("firstName"), PlayerPrefs.GetString("secondName"), PlayerPrefs.GetString("thirdName"), PlayerPrefs.GetString("fourthName"), PlayerPrefs.GetString("fifthName") };
-        highscore.Add(score);
+        highscore.Add(scoreboardscore);
         names.Add(accName);
         for (int i = 0; i < highscore.Count; i++)
         {
@@ -102,7 +102,7 @@ public class Scoreboard : MonoBehaviour
             PlayerPrefs.DeleteKey("thirdName");
             PlayerPrefs.DeleteKey("fourthName");
             PlayerPrefs.DeleteKey("fifthName");
-            score = 0;
+            scoreboardscore = 0;
             name = "";
         } firstCall = false;
     }
