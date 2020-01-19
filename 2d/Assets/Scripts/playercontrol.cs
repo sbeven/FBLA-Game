@@ -76,7 +76,7 @@ public class playercontrol : MonoBehaviour
             if (PermanentUI.perm.coins == 75)
             {
                 PermanentUI.perm.lives = 5;
-                PermanentUI.perm.points = PermanentUI.perm.points + 100;                
+                PermanentUI.perm.points = PermanentUI.perm.points + 100;       
                 SceneManager.LoadScene("Transition");
             }
         }

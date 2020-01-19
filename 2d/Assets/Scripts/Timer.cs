@@ -23,6 +23,7 @@ public class Timer : MonoBehaviour
         else
         {
             PermanentUI.perm.time -= 1 * Time.deltaTime;
+            PermanentUI.perm.timescore = (int) Mathf.Round(PermanentUI.perm.time);
             timeNumber.text = ("Time: " + Mathf.Round(PermanentUI.perm.time).ToString() );
         }
 

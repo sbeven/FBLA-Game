@@ -17,6 +17,7 @@ public class PermanentUI : MonoBehaviour
     public int levelpoints = 0;
     public string name = "";
     public float time = 90;
+    public int timescore = 0;
     public int LastScene;
     public static PermanentUI perm;
     private Canvas Canvass;
