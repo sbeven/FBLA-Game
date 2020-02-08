@@ -155,7 +155,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   speed: 7
-  jumpForce: 11
+  jumpForce: 11.5
   hurtForce: 5
   Coin: {fileID: 1986475615}
   footstep: {fileID: 1986475614}

@@ -2582,7 +2582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728849988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.9749, y: 0.37999845, z: -10}
+  m_LocalPosition: {x: -24.979778, y: 0.37999845, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5561,6 +5561,7 @@ MonoBehaviour:
   levelpoints: 0
   name: 
   time: 0
+  timescore: 0
   LastScene: 0
   lives: 10
   menumusic: {fileID: 0}
