@@ -57,7 +57,6 @@ public class playercontrol : MonoBehaviour
         PermanentUI.perm.livesAmount.text = "Lives: " + PermanentUI.perm.lives.ToString();
         if (PermanentUI.perm.lives <= 0)
         {
-            PermanentUI.perm.points = 0;
             SceneManager.LoadScene("Ending");
             PermanentUI.perm.lives = 5;
         }
