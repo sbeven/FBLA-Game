@@ -274,4 +274,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftCap: 0
   rightCap: 0
-  speed: 3
+  speed: 6
