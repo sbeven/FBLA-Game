@@ -41,7 +41,7 @@ public class playercontrol : MonoBehaviour
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
         //teleport to checkpoint in fourth level
-        if ((PermanentUI.perm.checkpoint != 0) && (SceneManager.GetActiveScene().name == "Fourth Level"))
+        if ((PermanentUI.perm.checkpoint != 0) && ((SceneManager.GetActiveScene().name == "Fourth Level") || (SceneManager.GetActiveScene().name == "Second Level final")))
         {
             transform.position = PermanentUI.perm.cppos;
         }

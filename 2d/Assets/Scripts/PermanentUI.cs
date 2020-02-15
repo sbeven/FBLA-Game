@@ -98,6 +98,6 @@ public class PermanentUI : MonoBehaviour
         lives = 15;
         points = points + 100;
         SceneManager.LoadScene("Transition");
-        cppos = new Vector2(-30.95f, -2.02f);
+        checkpoint = 0;
     }
 }
