@@ -31,6 +31,8 @@ public class PermanentUI : MonoBehaviour
     public AudioSource endmusic2;
     public AudioSource die;
     public float musicVolume = 1;
+    public int checkpoint = 0;
+    public Vector2 cppos = Vector2.zero;
     public void Update()
     {
         menumusic.volume = musicVolume;
@@ -89,5 +91,13 @@ public class PermanentUI : MonoBehaviour
         levelpoints = 0;
         coinText.text = coins.ToString();
         time = 90;
+    }
+    //resets lives, adds points, loads transition, resets checkpoint
+    public void nextlevel()
+    {
+        lives = 15;
+        points = points + 100;
+        SceneManager.LoadScene("Transition");
+        cppos = new Vector2(-30.95f, -2.02f);
     }
 }

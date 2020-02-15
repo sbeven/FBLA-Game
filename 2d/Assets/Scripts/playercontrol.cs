@@ -18,7 +18,7 @@ public class playercontrol : MonoBehaviour
     private enum State { idle, running, jumping, falling, hurt }
     private State state = State.idle;
 
-    //inspector variables
+    //inspector variables, audio
     [SerializeField] private LayerMask ground;
     [SerializeField] private LayerMask enemy;
     [SerializeField] private float speed = 5f;
@@ -28,6 +28,7 @@ public class playercontrol : MonoBehaviour
     [SerializeField] private AudioSource footstep;
     [SerializeField] private AudioSource recruit;
     [SerializeField] private AudioSource jump;
+    [SerializeField] private AudioSource checksound;
     [SerializeField] private int health = 3;
     // [SerializeField] private string sceneToLoad;
     int maxHealth = 0;
@@ -39,9 +40,13 @@ public class playercontrol : MonoBehaviour
         box = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
+        //teleport to checkpoint in fourth level
+        if ((PermanentUI.perm.checkpoint != 0) && (SceneManager.GetActiveScene().name == "Fourth Level"))
+        {
+            transform.position = PermanentUI.perm.cppos;
+        }
         maxHealth = health;
         healthBar.UpdateBar(health, maxHealth);
-        
     }
 
     private void Update()
@@ -74,9 +79,7 @@ public class playercontrol : MonoBehaviour
 //            PermanentUI.perm.points += 10;
             if (PermanentUI.perm.coins == 75)
             {
-                PermanentUI.perm.lives = 5;
-                PermanentUI.perm.points = PermanentUI.perm.points + 100;       
-                SceneManager.LoadScene("Transition");
+                PermanentUI.perm.nextlevel();
             }
         }
         if (collision.tag == "Adventurer")
@@ -86,16 +89,22 @@ public class playercontrol : MonoBehaviour
             recruits = recruits + 1;
             if(recruits >= 15)
             {
-                PermanentUI.perm.lives = 5;
-                PermanentUI.perm.points = PermanentUI.perm.points + 100;
-                SceneManager.LoadScene("Transition");
+                PermanentUI.perm.nextlevel();
             }
         }
         if (collision.tag == "Door")
         {
-            PermanentUI.perm.lives = 5;
-            PermanentUI.perm.points = PermanentUI.perm.points + 100;
-            SceneManager.LoadScene("Transition");
+            PermanentUI.perm.nextlevel();
+        }
+        if (collision.tag == "Checkpoint")
+        {
+            Checkpoint Checkpoint = collision.GetComponent<Checkpoint>();
+            if (PermanentUI.perm.checkpoint - Checkpoint.checkpointnumber < 1)
+            {
+            PermanentUI.perm.checkpoint = 1 + Checkpoint.checkpointnumber;
+            checksound.Play();
+            }
+
         }
     }
 

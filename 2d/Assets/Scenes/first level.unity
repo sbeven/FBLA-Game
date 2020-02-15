@@ -5573,6 +5573,8 @@ MonoBehaviour:
   endmusic2: {fileID: 0}
   die: {fileID: 0}
   musicVolume: 1
+  checkpoint: 0
+  cppos: {x: 0, y: 0}
 --- !u!4 &1703392687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1958050445040219296, guid: 34f61a869881c4f4181a259d61ffdb18,
