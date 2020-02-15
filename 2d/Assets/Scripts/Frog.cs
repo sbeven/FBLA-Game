@@ -21,6 +21,7 @@ public class Frog : Enemy
     }
     private void Update()
     {
+
         //transition from jump to fall
         if (anim.GetBool("Jumping"))
         {

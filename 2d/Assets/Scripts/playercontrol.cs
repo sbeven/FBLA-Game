@@ -114,7 +114,7 @@ public class playercontrol : MonoBehaviour
         {
 
             Enemy Enemy = other.gameObject.GetComponent<Enemy>();
-            RaycastHit2D hit = Physics2D.BoxCast(rb.position, box.bounds.size, 0f, Vector2.down, 1f, enemy);
+            RaycastHit2D hit = Physics2D.BoxCast(rb.position, box.bounds.size - Vector3.up, 0f, Vector2.down, 1f, enemy);
             if ((hit.collider != null) && (state == State.falling))
             {
                 Enemy.JumpedOn();
@@ -171,7 +171,7 @@ public class playercontrol : MonoBehaviour
         //jumping
         if (Input.GetButtonDown("Jump"))
         {
-            RaycastHit2D hit = Physics2D.BoxCast(rb.position, box.bounds.size, 0f,  Vector2.down, 1f, ground);
+            RaycastHit2D hit = Physics2D.BoxCast(rb.position, box.bounds.size - Vector3.up, 0f,  Vector2.down, 1f, ground);
             if (hit.collider != null)
             {
                 Jump();
