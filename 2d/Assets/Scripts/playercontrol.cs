@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class playercontrol : MonoBehaviour
 {
     [SerializeField] public SimpleHealthBar healthBar;
+    [SerializeField] public SimpleHealthBar jumpBar;
     //start() variables
     private Rigidbody2D rb;
     private BoxCollider2D box;
@@ -31,9 +32,8 @@ public class playercontrol : MonoBehaviour
     [SerializeField] private AudioSource checksound;
     [SerializeField] private int health = 3;
     // [SerializeField] private string sceneToLoad;
-    int maxHealth = 0;
     int recruits = 0;
-
+    [SerializeField] float jumpmeter = 5;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -45,17 +45,27 @@ public class playercontrol : MonoBehaviour
         {
             transform.position = PermanentUI.perm.cppos;
         }
-        maxHealth = health;
-        healthBar.UpdateBar(health, maxHealth);
+        healthBar.UpdateBar(health, 3);
     }
 
     private void Update()
     {
+        if (jumpmeter < 5)
+        {
+            jumpmeter += Time.deltaTime;
+            jumpBar.UpdateColor(Color.blue);
+        }
+        else
+        {
+            jumpBar.UpdateColor(new Vector4(1, 0.549019608f, 0,1));
+        }
         PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
         if (state != State.hurt)
         {
             Movement();
         }
+
+        jumpBar.UpdateBar(jumpmeter, 5);
         AnimationState();
         PermanentUI.perm.pointAmount.text = PermanentUI.perm.points.ToString();
         anim.SetInteger("state", (int)state); //sets animation based on enumerator state
@@ -65,6 +75,8 @@ public class playercontrol : MonoBehaviour
             SceneManager.LoadScene("Ending");
             PermanentUI.perm.lives = 5;
         }
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -142,7 +154,7 @@ public class playercontrol : MonoBehaviour
                     PermanentUI.perm.points = PermanentUI.perm.points - 20;
                     PermanentUI.perm.Reset();
                     health = 3;
-                    healthBar.UpdateBar(health, maxHealth);
+                    healthBar.UpdateBar(health, 3);
 //                    PermanentUI.perm.die.Play();
                 }
             }
@@ -156,12 +168,15 @@ public class playercontrol : MonoBehaviour
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
             transform.localScale = new Vector2(-1, 1);
+            GetComponentInChildren<Canvas>().transform.localScale = new Vector2(-1, 1);
+
         }
         //right
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
             transform.localScale = new Vector2(1, 1);
+            GetComponentInChildren<Canvas>().transform.localScale = new Vector2(1, 1);
         }
         // added (not in tutorial)
         else
@@ -176,6 +191,14 @@ public class playercontrol : MonoBehaviour
             {
                 Jump();
                 jump.Play();
+            }
+            else if (jumpmeter >= 5)
+            {
+                jumpmeter = 0;
+                Jump();
+                jump.Play();
+
+
             }
         }
     }
@@ -254,6 +277,6 @@ public class playercontrol : MonoBehaviour
     {
         health -= damage;
 
-        healthBar.UpdateBar(health, maxHealth);
+        healthBar.UpdateBar(health, 3);
     }
 }
