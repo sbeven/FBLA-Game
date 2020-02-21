@@ -17,7 +17,7 @@ public class PermanentUI : MonoBehaviour
     public int levelpoints = 0;
     public string name = "";
     public float time = 90;
-    public int timescore = 0;
+    public int timescore = 90;
     public int LastScene;
     public static PermanentUI perm;
     private Canvas Canvass;
@@ -30,6 +30,7 @@ public class PermanentUI : MonoBehaviour
     public AudioSource endmusic1;
     public AudioSource endmusic2;
     public AudioSource die;
+    public AudioSource timecrunch;
     public float musicVolume = 1;
     public int checkpoint = 0;
     public Vector2 cppos = Vector2.zero;
@@ -90,7 +91,11 @@ public class PermanentUI : MonoBehaviour
         coins = 0;
         levelpoints = 0;
         coinText.text = coins.ToString();
+        if(checkpoint == 0)
+        {
         time = 90;
+        }
+
     }
     //resets lives, adds points, loads transition, resets checkpoint
     public void nextlevel()
