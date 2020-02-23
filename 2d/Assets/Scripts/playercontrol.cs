@@ -57,7 +57,7 @@ public class playercontrol : MonoBehaviour
         }
         else
         {
-            jumpBar.UpdateColor(new Vector4(1, 0.549019608f, 0,1));
+            jumpBar.UpdateColor(new Vector4(1, 0.6f, 0,1));
         }
         PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
         if (state != State.hurt)
