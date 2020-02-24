@@ -93,14 +93,22 @@ public class PermanentUI : MonoBehaviour
         coinText.text = coins.ToString();
         if(checkpoint == 0)
         {
+            if (SceneManager.GetActiveScene().name == "Fourth Level")
+            {
+                time = 180;
+            }
+            else
+            {
         time = 90;
+            }
+
         }
 
     }
     //resets lives, adds points, loads transition, resets checkpoint
     public void nextlevel()
     {
-        lives = 15;
+        lives = 5;
         points = points + 100;
         SceneManager.LoadScene("Transition");
         checkpoint = 0;

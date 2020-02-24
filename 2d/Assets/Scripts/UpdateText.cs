@@ -61,7 +61,7 @@ public class UpdateText : MonoBehaviour
         else if (PermanentUI.perm.LastScene == 3)
         {
             PermanentUI.perm.music3.Stop();
-            Description.text = "Great Work! Get to the conference as fast as you can to claim your awards!";
+            Description.text = "Great Work! Get to the conference as fast as you can to claim your awards! You have 180 seconds!";
             Requirement.text = "";
             Coin.text = "Coin Bonus: " + PermanentUI.perm.coins * 10;
             Time.text = "Time Bonus: " + PermanentUI.perm.timescore;
@@ -70,6 +70,7 @@ public class UpdateText : MonoBehaviour
             PermanentUI.perm.points += PermanentUI.perm.timescore;
             Total.text = "You have " + PermanentUI.perm.points + " points";
             PermanentUI.perm.Reset();
+            PermanentUI.perm.time = 180;
         }
         else if (PermanentUI.perm.LastScene == 4)
         {
