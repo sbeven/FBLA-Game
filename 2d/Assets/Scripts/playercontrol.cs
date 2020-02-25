@@ -31,6 +31,7 @@ public class playercontrol : MonoBehaviour
     [SerializeField] private AudioSource jump;
     [SerializeField] private AudioSource checksound;
     [SerializeField] private int health = 3;
+    [SerializeField] private float hurttimer = 0;
     // [SerializeField] private string sceneToLoad;
     int recruits = 0;
     [SerializeField] float jumpmeter = 5;
@@ -50,6 +51,14 @@ public class playercontrol : MonoBehaviour
 
     private void Update()
     {
+        if (hurttimer > 0)
+        {
+            hurttimer -= Time.deltaTime;
+        }
+        else
+        {
+            hurttimer = 0;
+        }
         if (jumpmeter < 5)
         {
             jumpmeter += Time.deltaTime;
@@ -134,8 +143,9 @@ public class playercontrol : MonoBehaviour
             }
             else
             {
+                hurttimer = 0.5f;
                 state = State.hurt;
-                
+
                 if (other.gameObject.transform.position.x > transform.position.x)
                 {
                     //enemy is to right therefore i should be damaged and move left
@@ -235,9 +245,10 @@ public class playercontrol : MonoBehaviour
 
         } else if (state == State.hurt)
         {
-            if (Mathf.Abs(rb.velocity.x) < .1f)
+            if ((hurttimer == 0) || (Mathf.Abs(rb.velocity.x) <= .1))
             {
                 state = State.idle;
+                hurttimer = 0;
             }
         }
 

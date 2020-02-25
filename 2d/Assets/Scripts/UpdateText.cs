@@ -70,7 +70,8 @@ public class UpdateText : MonoBehaviour
             PermanentUI.perm.points += PermanentUI.perm.timescore;
             Total.text = "You have " + PermanentUI.perm.points + " points";
             PermanentUI.perm.Reset();
-            PermanentUI.perm.time = 180;
+            PermanentUI.perm.time = 210;
+            PermanentUI.perm.lives = 15;
         }
         else if (PermanentUI.perm.LastScene == 4)
         {
@@ -79,11 +80,13 @@ public class UpdateText : MonoBehaviour
             Requirement.text = "";
             Coin.text = "Coin Bonus: " + PermanentUI.perm.coins * 10;
             Time.text = "Time Bonus: " + PermanentUI.perm.timescore;
-            Level.text = "Level Bonus: 100";
+            Level.text = "Completion Bonus: 1000";
             PermanentUI.perm.points += PermanentUI.perm.levelpoints;
             PermanentUI.perm.points += PermanentUI.perm.timescore;
+            PermanentUI.perm.points += 900;
             Total.text = "You have " + PermanentUI.perm.points + " points";
             PermanentUI.perm.Reset();
+            PermanentUI.perm.diduwin = true;
         }
     }
     public void NextScene()

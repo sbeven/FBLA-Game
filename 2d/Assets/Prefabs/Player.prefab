@@ -265,6 +265,7 @@ MonoBehaviour:
   jump: {fileID: 1981975840}
   checksound: {fileID: 700747142}
   health: 3
+  hurttimer: 0
   jumpmeter: 5
 --- !u!95 &8161114277461541774
 Animator:

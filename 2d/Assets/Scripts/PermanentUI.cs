@@ -34,6 +34,7 @@ public class PermanentUI : MonoBehaviour
     public float musicVolume = 1;
     public int checkpoint = 0;
     public Vector2 cppos = Vector2.zero;
+    public bool diduwin = false;
     public void Update()
     {
         menumusic.volume = musicVolume;
@@ -88,6 +89,7 @@ public class PermanentUI : MonoBehaviour
     }
     public void Reset()
     {
+        timecrunch.Stop();
         coins = 0;
         levelpoints = 0;
         coinText.text = coins.ToString();
@@ -95,7 +97,7 @@ public class PermanentUI : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "Fourth Level")
             {
-                time = 180;
+                time = 210;
             }
             else
             {
@@ -108,6 +110,7 @@ public class PermanentUI : MonoBehaviour
     //resets lives, adds points, loads transition, resets checkpoint
     public void nextlevel()
     {
+        timecrunch.Stop();
         lives = 5;
         points = points + 100;
         SceneManager.LoadScene("Transition");
