@@ -9,7 +9,7 @@ public class PermanentUI : MonoBehaviour
 {
     //player stats
     public int coins = 0;
-
+    public bool hardBool = false;
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI pointAmount;
     public TextMeshProUGUI livesAmount;
@@ -95,14 +95,31 @@ public class PermanentUI : MonoBehaviour
         coinText.text = coins.ToString();
         if(checkpoint == 0)
         {
-            if (SceneManager.GetActiveScene().name == "Fourth Level")
+            if (!hardBool)
             {
-                time = 210;
+                if (SceneManager.GetActiveScene().name == "Fourth Level")
+                {
+                    time = 210;
+                }
+                else
+                {
+                    time = 90;
+                }
+
             }
-            else
+            else if (hardBool)
             {
-        time = 90;
+                if (SceneManager.GetActiveScene().name == "Fourth Level")
+                {
+                    time = 120;
+                }
+                else
+                {
+                    time = 60;
+                }
+
             }
+
 
         }
 
@@ -112,7 +129,15 @@ public class PermanentUI : MonoBehaviour
     {
         timecrunch.Stop();
         lives = 5;
-        points = points + 100;
+        if (!hardBool)
+        {
+            points = points + 100;
+        }
+        else if (hardBool)
+        {
+            points = points + 200;
+        }
+
         SceneManager.LoadScene("Transition");
         checkpoint = 0;
     }

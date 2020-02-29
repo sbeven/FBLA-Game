@@ -12,7 +12,7 @@ public class Fall : MonoBehaviour
             PermanentUI.perm.lives = PermanentUI.perm.lives - 1;
             PermanentUI.perm.die.Play();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            PermanentUI.perm.points = PermanentUI.perm.points - 20;
+            PermanentUI.perm.points = PermanentUI.perm.points - 200;
             PermanentUI.perm.Reset();
         }
     }

@@ -14,15 +14,22 @@ public class UpdateText : MonoBehaviour
     public TextMeshProUGUI Time;
     public TextMeshProUGUI Level;
     public TextMeshProUGUI Total;
-
+    private int time = 90;
+    private int levelBonus = 100;
 
     // Start is called before the first frame update
     void Start()
     {
+
         if (PermanentUI.perm.LastScene == 0)
         {
+            if (PermanentUI.perm.hardBool)
+            {
+                time = 60;
+                levelBonus = 200;
+            }
             PermanentUI.perm.menumusic.Stop();
-            Description.text = "Service: March of Dimes needs your help fundraising! Collect 75 coins in 90 seconds";
+            Description.text = "Service: March of Dimes needs your help fundraising! Collect 75 coins in " +time+" seconds";
             Requirement.text = "";
             Coin.text = "";
             Time.text = "";
@@ -35,11 +42,11 @@ public class UpdateText : MonoBehaviour
         else if (PermanentUI.perm.LastScene == 1)
         {
             PermanentUI.perm.music1.Stop();
-            Description.text = "Education: Answer 5 questions in 90 seconds to learn about FBLA's Business Achievement Awards!";
+            Description.text = "Education: Answer 5 questions in " + time + " seconds to learn about FBLA's Business Achievement Awards!";
             Requirement.text = "You made it! You collected 75 coins for your local chapter and donated to the March of Dimes";
             Coin.text = "Coin Bonus: "+ PermanentUI.perm.coins*10;
             Time.text = "Time Bonus: " + PermanentUI.perm.timescore;
-            Level.text = "Level Bonus: 100";
+            Level.text = "Level Bonus: " + levelBonus;
             PermanentUI.perm.points += PermanentUI.perm.levelpoints;
             PermanentUI.perm.points += PermanentUI.perm.timescore;
             Total.text = "You have "+ PermanentUI.perm.points+ " points";
@@ -48,11 +55,11 @@ public class UpdateText : MonoBehaviour
         else if (PermanentUI.perm.LastScene == 2)
         {
             PermanentUI.perm.music2.Stop();
-            Description.text = "Progress: Your local chapter needs more members! Recruit 15 members in 90 seconds to get to the next level";
+            Description.text = "Progress: Your local chapter needs more members! Recruit 15 members in " + time + " seconds to get to the next level";
             Requirement.text = "Congratulations!   You got them all right!                                ";
             Coin.text = "Coin Bonus: " + PermanentUI.perm.coins * 10;
             Time.text = "Time Bonus: " + PermanentUI.perm.timescore;
-            Level.text = "Level Bonus: 100";
+            Level.text = "Level Bonus: " + levelBonus;
             PermanentUI.perm.points += PermanentUI.perm.levelpoints;
             PermanentUI.perm.points += PermanentUI.perm.timescore;
             Total.text = "You have " + PermanentUI.perm.points + " points";
@@ -65,7 +72,7 @@ public class UpdateText : MonoBehaviour
             Requirement.text = "";
             Coin.text = "Coin Bonus: " + PermanentUI.perm.coins * 10;
             Time.text = "Time Bonus: " + PermanentUI.perm.timescore;
-            Level.text = "Level Bonus: 100";
+            Level.text = "Level Bonus: " + levelBonus;
             PermanentUI.perm.points += PermanentUI.perm.levelpoints;
             PermanentUI.perm.points += PermanentUI.perm.timescore;
             Total.text = "You have " + PermanentUI.perm.points + " points";

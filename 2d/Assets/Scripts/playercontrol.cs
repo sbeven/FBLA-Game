@@ -161,7 +161,15 @@ public class playercontrol : MonoBehaviour
                 {
                     PermanentUI.perm.lives = PermanentUI.perm.lives - 1;
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                    PermanentUI.perm.points = PermanentUI.perm.points - 20;
+                    if (PermanentUI.perm.hardBool)
+                    {
+                        PermanentUI.perm.points = PermanentUI.perm.points - 200;
+                    }
+                    else
+                    {
+                        PermanentUI.perm.points = PermanentUI.perm.points - 20;
+
+                    }
                     PermanentUI.perm.Reset();
                     health = 3;
                     healthBar.UpdateBar(health, 3);
