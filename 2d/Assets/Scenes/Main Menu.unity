@@ -2200,6 +2200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: 0
+  hardBool: 0
   coinText: {fileID: 1239198070}
   pointAmount: {fileID: 366736997}
   livesAmount: {fileID: 626851265}
@@ -2415,9 +2416,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0fd2d6364ed74064e83cf26beeb8bd72, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fc77e54fb18c4ef4b8d874cc80f65194, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 0.156
   m_Pitch: 1
   Loop: 1
   Mute: 0
