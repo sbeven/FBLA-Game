@@ -1,29 +1,31 @@
-# Foobar
+# BAA: The Game
+## A Leader's Walk 
 
-Foobar is a Python library for dealing with word pluralization.
+This game is to educate FBLA members and non-FBLA members about the FBLA BAA process. 
+
+## Table of Contents
+
+*Installation
+*Controls
+*Softwares Used
+*Libraries Used
+*Creators
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Double click on the program to download and play the game
 
-```bash
-pip install foobar
-```
+## Controls
 
-## Usage
 
-```python
-import foobar
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
+## Softwares Used
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+## Libraries Used
+
+
+
+## Creators
+
