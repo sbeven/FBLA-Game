@@ -5,11 +5,11 @@ This game is to educate FBLA members and non-FBLA members about the FBLA BAA pro
 
 ## Table of Contents
 
-*Installation
-*Controls
-*Softwares Used
-*Libraries Used
-*Creators
+* Installation
+* Controls
+* Softwares Used
+* Libraries Used
+* Creators
 
 ## Installation
 
