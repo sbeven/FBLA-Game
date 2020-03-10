@@ -2199,6 +2199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4adec004b4f52d946b6329c16d97b8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switchText: {fileID: 0}
   coins: 0
   hardBool: 0
   coinText: {fileID: 1239198070}

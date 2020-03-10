@@ -8,6 +8,7 @@ public class ToMainMenu : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("Main Menu");
+        PermanentUI.perm.hardBool = false;
     }
 
 }

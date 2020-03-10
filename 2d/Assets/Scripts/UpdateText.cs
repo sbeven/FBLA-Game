@@ -28,6 +28,11 @@ public class UpdateText : MonoBehaviour
                 time = 60;
                 levelBonus = 200;
             }
+            else
+            {
+                time = 90;
+                levelBonus = 100;
+            }
             PermanentUI.perm.menumusic.Stop();
             Description.text = "Service: March of Dimes needs your help fundraising! Collect 75 coins in " +time+" seconds";
             Requirement.text = "";
