@@ -20,12 +20,9 @@ Double click on the program to download and play the game
 Use the left and right arrow keys to move left and right
 
 Use the up arrow or the spacebar key to jump - double jump is possible when the player's skill bar fills up over time
-
-
-
-
 ## Stages
 4 stages:
+
 1. Collect coins for a your local chapter - Service
 2. Take a quiz on the BAA program for the regional competition - Education
 3. Recruit members for your state's chapters - Progress
@@ -34,8 +31,8 @@ Use the up arrow or the spacebar key to jump - double jump is possible when the 
 ## Softwares Used
 Unity: Version 2019.2.12f1
 ## Libraries Used
+Sunnyland
 
-
-
+Textmesh Pro
 ## Creators
 Allen Chen, Sai Sakhamuri, Steven Zhang
