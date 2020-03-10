@@ -87,6 +87,7 @@ public class PermanentUI : MonoBehaviour
         }
 
     }
+    //"soft reset" - doesnt load next level
     public void Reset()
     {
         timecrunch.Stop();
@@ -95,31 +96,52 @@ public class PermanentUI : MonoBehaviour
         coinText.text = coins.ToString();
         if(checkpoint == 0)
         {
-            if (!hardBool)
+            if (hardBool)
             {
+
                 if (SceneManager.GetActiveScene().name == "Fourth Level")
                 {
-                    time = 210;
-                }
-                else
-                {
-                    time = 90;
+                    time = 200;
                 }
 
-            }
-            else if (hardBool)
-            {
-                if (SceneManager.GetActiveScene().name == "Fourth Level")
+                if (SceneManager.GetActiveScene().name == "Third Level")
                 {
-                    time = 120;
+                    time = 150;
                 }
-                else
+                
+                if (SceneManager.GetActiveScene().name == "Second Level final")
+                {
+                    time = 60;
+                }
+
+                if (SceneManager.GetActiveScene().name == "first level")
                 {
                     time = 60;
                 }
 
             }
+            else
+            {
+                if (SceneManager.GetActiveScene().name == "Fourth Level")
+                {
+                    time = 500;
+                }
 
+                if (SceneManager.GetActiveScene().name == "Third Level")
+                {
+                    time = 250;
+                }
+
+                if (SceneManager.GetActiveScene().name == "Second Level final")
+                {
+                    time = 90;
+                }
+
+                if (SceneManager.GetActiveScene().name == "first level")
+                {
+                    time = 90;
+                }
+            }
 
         }
 
@@ -129,15 +151,6 @@ public class PermanentUI : MonoBehaviour
     {
         timecrunch.Stop();
         lives = 5;
-        if (!hardBool)
-        {
-            points = points + 100;
-        }
-        else if (hardBool)
-        {
-            points = points + 200;
-        }
-
         SceneManager.LoadScene("Transition");
         checkpoint = 0;
     }
