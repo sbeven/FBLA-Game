@@ -7,6 +7,7 @@ This game is to educate FBLA members and non-FBLA members about the FBLA BAA pro
 
 * Installation
 * Controls
+* Stages
 * Softwares Used
 * Libraries Used
 * Creators
@@ -16,6 +17,10 @@ This game is to educate FBLA members and non-FBLA members about the FBLA BAA pro
 Double click on the program to download and play the game
 
 ## Controls
+
+
+
+## Stages
 
 
 
