@@ -3,7 +3,7 @@
 
 "A Leader's Walk" is a game that educates FBLA members and non-FBLA members about the FBLA Business Achievement Awards (BAA) Program through an applicable simulation. By following the BAA guidlelines of service, education, and progress, users complete various activities and settings that mimick real-life activities that leaders have to follow in order to be successful. We took a creative approach of implementing a double-jump feature and enemy AI (frogs and eagles) in order for the user to have the most enjoyable experience as they play. Additionally, we implemented a diffculty setting in options (advanced rules) and a scoreboard that allow different users to compete with each other locally to get a higher ranking (multiplayer). The overall goal is for the user to avoid the bad ending where the player runs out of lives and to get the good ending where the player collects their medals at the national competition. 
 
-**User controls and instructions automatically pop up when the game is launched to reduce confusion.**
+**User controls and instructions automatically pop up when the game is launched to avoid confusion.**
 
 
 ## Table of Contents
