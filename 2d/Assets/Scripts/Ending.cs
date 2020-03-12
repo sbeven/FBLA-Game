@@ -20,7 +20,7 @@ public class Ending : MonoBehaviour
         PermanentUI.perm.die.Stop();
         if (PermanentUI.perm.diduwin == true)
         {
-            if (PermanentUI.perm.points >= 2200)
+            if (PermanentUI.perm.points >= 2600)
             {
             goodorbad.text = "Amazing! As a result of your hard work, you've recieved all 4 awards, and you've even gotten first place in your event at at NLC!";
              PermanentUI.perm.endmusic2.Play();
