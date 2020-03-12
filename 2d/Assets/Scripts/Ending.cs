@@ -26,11 +26,13 @@ public class Ending : MonoBehaviour
             {
             goodorbad.text = "Amazing! As a result of your hard work, you've recieved all 4 awards, and you've even gotten first place in your event at at NLC!";
              PermanentUI.perm.endmusic2.Play();
+                PermanentUI.perm.diduwin = false;
             }
             else
             {
             PermanentUI.perm.endmusic1.Play();
             goodorbad.text = "Good Job! You've gotten all 4 awards!";
+                PermanentUI.perm.diduwin = false;
             }
         }
         else
