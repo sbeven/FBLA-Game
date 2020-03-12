@@ -13,9 +13,9 @@ public class PermanentUI : MonoBehaviour
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI pointAmount;
     public TextMeshProUGUI livesAmount;
-    public int points = 0;
     public int levelpoints = 0;
     public string name = "";
+    public int points = 0;
     public float time = 90;
     public int timescore = 90;
     public int LastScene;
