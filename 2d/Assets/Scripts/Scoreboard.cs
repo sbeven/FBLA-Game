@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Scoreboard : MonoBehaviour
 {
+    //list of scores and names
     private List<int> highscore = new List<int>() { 0, 0, 0, 0, 0 };
     private List<string> names = new List<string>() { "", "", "", "", "" };
     public Text firstScore;
@@ -19,6 +20,7 @@ public class Scoreboard : MonoBehaviour
     public Text fourthName;
     public Text fifthName;
 
+    //current score and name
     private int scoreboardscore = PermanentUI.perm.points;
     private string accName = PermanentUI.perm.name;
 
@@ -29,8 +31,10 @@ public class Scoreboard : MonoBehaviour
     {
         highscore = new List<int>() { PlayerPrefs.GetInt("firstScore"), PlayerPrefs.GetInt("secondScore") , PlayerPrefs.GetInt("thirdScore") , PlayerPrefs.GetInt("fourthScore") , PlayerPrefs.GetInt("fifthScore") };
         names = new List<string>() { PlayerPrefs.GetString("firstName"), PlayerPrefs.GetString("secondName"), PlayerPrefs.GetString("thirdName"), PlayerPrefs.GetString("fourthName"), PlayerPrefs.GetString("fifthName") };
+        //links score element and name element
         highscore.Add(scoreboardscore);
         names.Add(accName);
+        //simple bubble sort
         for (int i = 0; i < highscore.Count; i++)
         {
             for (int j = i + 1; j < highscore.Count; j++)
@@ -48,6 +52,7 @@ public class Scoreboard : MonoBehaviour
                 }
             }
         }
+        //redisplay score
         firstScore.text = "" + highscore[0];
         secondScore.text = "" + highscore[1];
         thirdScore.text = "" + highscore[2];
@@ -59,6 +64,7 @@ public class Scoreboard : MonoBehaviour
         thirdName.text = "" + names[2];
         fourthName.text = "" + names[3];
         fifthName.text = "" + names[4];
+        //saves score
         PlayerPrefs.SetInt("firstScore", highscore[0]);
         PlayerPrefs.Save();
         PlayerPrefs.SetInt("secondScore", highscore[1]);
@@ -90,6 +96,7 @@ public class Scoreboard : MonoBehaviour
 
     private void Awake()
     {
+        //only does this once - reset score
         if (firstCall)
         {
             PlayerPrefs.DeleteKey("firstScore");

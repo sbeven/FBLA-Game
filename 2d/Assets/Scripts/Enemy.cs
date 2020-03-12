@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         death = GetComponent<AudioSource>();
     }
-    public void JumpedOn()
+    public void JumpedOn() //animation when player jumps on enemy
     {
         anim.SetTrigger("Death");
         death.Play();
@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
     }
 
-    private void Death()
+    private void Death() //remove object to free memory
     {
         Destroy(this.gameObject);
     }

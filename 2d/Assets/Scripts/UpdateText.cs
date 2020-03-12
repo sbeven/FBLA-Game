@@ -14,7 +14,7 @@ public class UpdateText : MonoBehaviour
     public TextMeshProUGUI Time;
     public TextMeshProUGUI Level;
     public TextMeshProUGUI Total;
-    private int levelBonus = 100;
+    private int levelBonus = 100; //default bonus is 100
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class UpdateText : MonoBehaviour
 
         if (PermanentUI.perm.LastScene == 0)
         {
-            if (PermanentUI.perm.hardBool)
+            if (PermanentUI.perm.hardBool) //sets time based on difficulty mode
             {
                 PermanentUI.perm.time = 60;
             }
@@ -32,14 +32,16 @@ public class UpdateText : MonoBehaviour
 
             }
             PermanentUI.perm.menumusic.Stop();
+            //set text
             Description.text = "Service: March of Dimes needs your help fundraising! Collect 75 coins in " + PermanentUI.perm.time + " seconds";
+            //empty because nothing is obtained yet
             Requirement.text = "";
             Coin.text = "";
             Time.text = "";
             Level.text = "";
             Total.text = "";
             PermanentUI.perm.points += PermanentUI.perm.levelpoints;
-            
+            //reset current scores
             PermanentUI.perm.Reset();
         }
         else if (PermanentUI.perm.LastScene == 1)
@@ -145,7 +147,7 @@ public class UpdateText : MonoBehaviour
     }
     public void NextScene()
     {
-        
+        //different music played according to level
         if (PermanentUI.perm.LastScene == 0)
         {
             PermanentUI.perm.music1.Play();

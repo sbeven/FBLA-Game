@@ -19,15 +19,15 @@ public class Timer : MonoBehaviour
     private void Update()
     {
         if ((SceneManager.GetActiveScene().name != "Fourth Level") && (SceneManager.GetActiveScene().name != "first level")
-            && (SceneManager.GetActiveScene().name != "Second Level final") && (SceneManager.GetActiveScene().name != "Third Level"))
-        {
+            && (SceneManager.GetActiveScene().name != "Second Level final") && (SceneManager.GetActiveScene().name != "Third Level")) //does nothing on ui scenes
+        { 
 
         }
         else
         {
-            PermanentUI.perm.time -= 1 * Time.deltaTime;
+            PermanentUI.perm.time -= 1 * Time.deltaTime; //count down on time
             PermanentUI.perm.timescore = (int) Mathf.Round(PermanentUI.perm.time);
-            timeNumber.text = ("Time: " + Mathf.Round(PermanentUI.perm.time).ToString() );
+            timeNumber.text = ("Time: " + Mathf.Round(PermanentUI.perm.time).ToString() ); //set time
         }
         if (PermanentUI.perm.time <= 5.5 && soundactive == false && PermanentUI.perm.time >= 4)
         {
@@ -41,7 +41,7 @@ public class Timer : MonoBehaviour
 
         if (PermanentUI.perm.timescore <= 5)
        {
-            if (PermanentUI.perm.timescore == 0)
+            if (PermanentUI.perm.timescore == 0) 
             {
                 timeup.text = "Time's up!";
 
@@ -59,7 +59,7 @@ public class Timer : MonoBehaviour
         {
         timeup.enabled = false;
         }
-        if (PermanentUI.perm.time <= 0)
+        if (PermanentUI.perm.time <= 0) //resets scene if timeout
         {
             PermanentUI.perm.checkpoint = 0;
             PermanentUI.perm.points = PermanentUI.perm.points - 200;

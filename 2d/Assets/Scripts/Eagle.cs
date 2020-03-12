@@ -25,10 +25,7 @@ public class Eagle : Enemy
                 facingleft = true;
                 transform.localScale = new Vector3(1, 1);
             }
-            else
-            {
 
-            }
             if (facingleft == true)
             {
                 rb.velocity = new Vector2(-speed, 0);

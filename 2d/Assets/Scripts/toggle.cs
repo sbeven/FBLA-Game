@@ -10,8 +10,8 @@ public class toggle : MonoBehaviour
     public TextMeshProUGUI switchText;
     public void changeBool()
     {
-        bool toggleSwitch = gameObject.GetComponent<Toggle>().isOn;
-        if (toggleSwitch)
+        bool toggleSwitch = gameObject.GetComponent<Toggle>().isOn; //get value of toggle
+        if (toggleSwitch) //change toggle display
         {
             switchText.color = new Color32(255, 0, 0, 255);
             switchText.text = "Off";

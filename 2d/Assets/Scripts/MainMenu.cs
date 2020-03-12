@@ -6,42 +6,26 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
- //   public GameObject Instructions;
- //   public GameObject Menu;
- //   public static bool firstCall = true;
     public Slider volume;
 
     public void PlayGame()
     {
         PermanentUI.perm.LastScene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene("Transition");
+        SceneManager.LoadScene("Transition"); //plays game
     }
 
     public void QuitGame()
     {
-        Debug.Log("QUIT");
-        Application.Quit();
+        Application.Quit(); //quits game
     }
 
     public void Scoreboard()
     {
-        SceneManager.LoadScene("Score Board");
-    }
-
-    private void Awake()
-    {
-
-        //if (firstCall)
-        //{
-        //    Instructions.SetActive(true);
-        //    Menu.SetActive(false);
-
-        //}
-        //firstCall = false;
+        SceneManager.LoadScene("Score Board"); //loads leaderboard
     }
 
     private void Update()
     {
-        PermanentUI.perm.musicVolume = volume.value;
+        PermanentUI.perm.musicVolume = volume.value; //update volume with slider
     }
 }

@@ -11,6 +11,7 @@ public class Ending : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //stops music
         PermanentUI.perm.menumusic.Stop();
         PermanentUI.perm.music1.Stop();
         PermanentUI.perm.music2.Stop();
@@ -20,7 +21,7 @@ public class Ending : MonoBehaviour
         PermanentUI.perm.die.Stop();
         if (PermanentUI.perm.diduwin == true)
         {
-            if (PermanentUI.perm.points >= 2200)
+            if (PermanentUI.perm.points >= 2200) //different display according to point value
             {
             goodorbad.text = "Amazing! As a result of your hard work, you've recieved all 4 awards, and you've even gotten first place in your event at at NLC!";
              PermanentUI.perm.endmusic2.Play();

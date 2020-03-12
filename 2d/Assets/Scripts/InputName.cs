@@ -13,7 +13,7 @@ public class InputName : MonoBehaviour
     {
         if(PermanentUI.perm.points >= 2000)
         {
-            Score.text = "Congratulations! You scored " + PermanentUI.perm.points.ToString() + "!";
+            Score.text = "Congratulations! You scored " + PermanentUI.perm.points.ToString() + "!"; //set string
         } else
         {
             Score.text = "You scored " + PermanentUI.perm.points.ToString() + "!";
@@ -22,12 +22,12 @@ public class InputName : MonoBehaviour
 
     public void StoreName()
     {
-        PermanentUI.perm.name = inputField.GetComponent<Text>().text;
+        PermanentUI.perm.name = inputField.GetComponent<Text>().text; //set variable name to textbox content
     }
     
     public void toScoreboard()
     {
-        SceneManager.LoadScene("Score Board");
+        SceneManager.LoadScene("Score Board"); //load scoreboard
     }
 
 }
