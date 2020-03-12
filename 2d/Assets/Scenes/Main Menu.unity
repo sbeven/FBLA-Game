@@ -867,7 +867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -130, y: -83}
+  m_AnchoredPosition: {x: -130, y: -108}
   m_SizeDelta: {x: 1926.7, y: 1307.8}
   m_Pivot: {x: 0.5000001, y: 0.49999988}
 --- !u!114 &317169641
@@ -4199,13 +4199,11 @@ MonoBehaviour:
 
     Use the up key or spacebar to jump
 
-    *Orange bar above player = double jump - bar builds up over time (advanced rule)*
-
-    While in the Main Menu, you can press x to play the first level
+    *Double jump when the bar turns orange - time based cooldown (advanced rule)*
 
     Press Escape anywhere to quit out of the game
 
-'
+    Use the mouse to manupulate UI elements'
 --- !u!222 &1308605226
 CanvasRenderer:
   m_ObjectHideFlags: 0
