@@ -901,12 +901,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Objective:
-
-
-    Complete the objective in each level to complete each tier of the BAA program
-
-    Collect as many points as you can along the way'
+  m_Text: "Objective:\n\nComplete the objective in each level to complete \neach tier
+    of the BAA program\nCollect as many points as you can along the way"
 --- !u!222 &317169642
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1607,8 +1603,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '** The more points you have, the higher your chances are of completing
-    the program **'
+  m_Text: "** The more points you have, \nthe higher your chances are of completing
+    the program **"
 --- !u!222 &570386610
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2205,9 +2201,9 @@ MonoBehaviour:
   coinText: {fileID: 1239198070}
   pointAmount: {fileID: 366736997}
   livesAmount: {fileID: 626851265}
-  points: 0
   levelpoints: 0
   name: 
+  points: 0
   time: 0
   timescore: 0
   LastScene: 0
@@ -4192,18 +4188,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Player Control:
-
-
-    Use the left and right arrow keys or the A and D key to move
-
-    Use the up key or spacebar to jump
-
-    *Double jump when the bar turns orange - time based cooldown (advanced rule)*
-
-    Press Escape anywhere to quit out of the game
-
-    Use the mouse to manupulate UI elements'
+  m_Text: "Player Control:\n\nUse the left and right arrow keys \nor the A and D key
+    to move\nUse the up key or spacebar to jump\n*Double jump when the bar turns orange
+    - time based cooldown \n(advanced rule)*\nPress Escape anywhere to quit out of
+    the game\nUse the mouse to manupulate UI elements"
 --- !u!222 &1308605226
 CanvasRenderer:
   m_ObjectHideFlags: 0
